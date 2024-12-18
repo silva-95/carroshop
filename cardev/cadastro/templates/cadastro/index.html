@@ -1,0 +1,64 @@
+{% extends "global/base.html" %}
+
+{% block texto %}
+<main class="container-fluid">
+    <section id="cadastro">
+      <form action="" method="get">
+        <!-- method get (publico) / post (secreto) -->
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <label for="nome">Nome: </label>
+            <input type="text" class="form-control" name="" maxlength="20" placeholder="Digite seu nome" required>
+          </div>
+          <div class="col-12 col-md-6">
+            <label for="idade">Idade:</label>
+            <input type="number" class="form-control" name="idade" required>
+          </div>
+        </div>
+
+
+        <label for="email">E-mail:</label>
+        <input type="email" class="form-control" name="email" required>
+        <p></p><label for="telefone">Telefone:</label>
+        <input type="text" name="Telefone" class="form-control" placeholder="(DDD)9 9999-9999"
+          pattern="^\(\d{2}\)\d{5}-\d{4}$">
+        <p></p><label for="senha">Senha:</label>
+        <input type="password" class="form-control" name="senha" required>
+        <p></p><label>Sexo:</label>
+        <label for="sexo" class="form-check-label">M:</label>
+        <input type="radio" class="form-check-input" name="sexo" value="m">
+        <label for="sexo" class="form-check-label">F:</label>
+        <input type="radio" class="form-check-input" name="sexo" value="f">
+        <p></p> <label for="time">Time:</label>
+        <select name="time" class="form-select">
+          <option value="fla">Flamengo</option>
+          <option value="nig">Nova Iguaçu</option>
+          <option value="cab">Cabofriense</option>
+          <option value="mad">Madureira</option>
+        </select>
+        <p></p>
+        <label>Laudo medico?</label>
+        <p></p> <label for="tdah" class="form-check-label">TDAH:</label> <input type="checkbox" name="tdah"
+          class="form-check-input" value="tdah">
+        <p></p> <label for="autismo" class="form-check-label">Autismo:</label> <input type="checkbox" name="autismo"
+          class="form-check-input" value="autismo">
+        <p></p><label for="nasc">Nascimento:</label>
+        <input type="date" name="nasc" class="form-control">
+        <p></p><label for="nasctime">Nascimento e Hora:</label>
+        <input type="datetime-local" name="nasctime" class="form-control">
+        <p></p><label for="hora">Horario do sono:</label>
+        <input type="time" name="hora" class="form-control">
+        <p></p><label for="curriculo">Curriculo</label>
+        <input type="file" name="curriculo" class="form-contrlo">
+        <p></p><label for="cor">Selecione sua cor preferida</label>
+        <input type="color" name="cor">
+        <p></p><label for="busca">Busca:</label>
+        <input type="search" name="busca" class="form-control">
+
+        <p></p><input type="submit" value="Enviar" class="btn btn-success">
+        <input type="reset" value="Limpar" class="btn btn-danger">
+      </form>
+    </section>
+  </main>
+
+{% endblock texto %}

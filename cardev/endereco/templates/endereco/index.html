@@ -1,0 +1,30 @@
+{% extends "global/base.html" %}
+
+{% block texto %}
+<main>
+    <section id="cep" class="container-fluid">
+        <!-- Inicio do formulario -->
+        <form method="get" action=".">
+            <label>Cep:
+                <input class="form-control" name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+                    onblur="pesquisacep(this.value);" /></label><br />
+            <label>Rua:
+                <input readonly class="form-control" name="rua" type="text" id="rua" size="60" /></label><br />
+            <label>Numero:
+                <input class="form-control" name="num" type="text" id="num" size="10" /></label><br />
+            <label>Complemento:
+                <input class="form-control" name="comp" type="text" id="comp" size="60" /></label><br />
+            <label>Bairro:
+                <input readonly class="form-control" name="bairro" type="text" id="bairro"
+                    size="40" /></label><br />
+            <label>Cidade:
+                <input readonly class="form-control" name="cidade" type="text" id="cidade"
+                    size="40" /></label><br />
+            <label>Estado:
+                <input readonly class="form-control" name="uf" type="text" id="uf" size="2" /></label><br />
+            <!-- <label>IBGE: -->
+                <input name="ibge" type="hidden" id="ibge" size="8" /></label><br />
+        </form>
+    </section>
+</main>
+{% endblock texto %}
